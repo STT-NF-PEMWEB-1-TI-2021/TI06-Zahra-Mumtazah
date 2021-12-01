@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox3</title>
+    <style>
+        .body{
+            display: flex;
+            min-height: 100px;
+            flex-direction: column;
+            margin: 3;
+        }
+        .div{
+            display: flex;
+        }
+        .header{
+            background-color: rgb(0, 204, 255);
+            margin-top: 20px;
+            height: 100px;
+            width: 1625px;
+            margin-bottom: 25px;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        .div aside{
+            background-color: rgb(0, 174, 255);
+            flex: 1;
+            order: 1;
+            flex: 0 0 10vw;
+            height: 65vh;
+            width: 10vh;
+            margin-right: 20px;
+            margin-left: 25px;
+        }
+        .div article{
+            background-color:#CD5C5C ;
+            flex: 1;
+            order: 2;
+            height: 65vh;
+            width: 5vh;
+            margin-bottom: 10px;
+            margin-right: 25px;
+        }
+        .footer{
+            background-color:rgb(0, 204, 255); 
+            width: 1625px;
+            height: 100px ;
+            margin-top: 15em;
+            margin-bottom: 20px;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        .div img{
+            margin-right: 20px;
+            margin-top: 140px;
+        }
+        .art{
+            align-items: center;
+        }
+    </style>
+</head>
+<body bgcolor="#E9967A" class="body">
+    <header class="header"><center><h1>Header</h1></center></header>
+    <div class="div">
+        <aside><center><h1>Aside</h1></center></aside>
+        <article class="art"><center><h1>Article</h1></center>
+            <div><center>
+                <img src="mang.jpg" width="190" height="190">
+                <img src="chimmy.png"width="190" height="190">
+                <img src="shooky.png"width="190" height="190">
+                </center>
+            </div>
+        </article>
+    </div>
+    <footer class="footer"><center><h1>Footer</h1></center></footer>
+</body>
+</html>
