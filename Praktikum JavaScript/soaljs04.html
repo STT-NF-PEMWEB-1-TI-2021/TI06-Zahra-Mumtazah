@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hitung Jumlah Bilangan</title>
+        <script>
+            function hitung(){
+                let x = Number(document.getElementById("bil").value);
+                let y = Number(document.getElementById("bil2").value);
+                let z = x + y;
+                document.getElementById("bil3").value=z;
+            }
+        </script>
+
+    </head>
+    <body>
+        <form id="form">
+            <input type="text" id="bil" value="" onchange="hitung()"/>
+            <br/>
+            <b>+</b>
+            <br/>
+            <input type="text" id="bil2" value="" onchange="hitung()"/>
+            <br/>
+            <b>=</b>
+            <br/>
+            <input type="text" id="bil2" value=""/>
+        </form>
+    </body>
+</html>
