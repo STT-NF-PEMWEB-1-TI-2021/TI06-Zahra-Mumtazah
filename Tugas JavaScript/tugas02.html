@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <title>Chat</title>
+    <style>
+        .fld{
+            position: relative;
+            border: 1px solid;
+            width: 50%;
+            height: 550px;
+            overflow: auto;
+            padding: 5px;
+        }
+        .pesan{
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            width: 99%;
+            margin-bottom: 5px;
+        }
+        .pesan input {
+            width: 100%;
+        }
+        #messages{
+            height: 525px;
+        }
+    </style>
+    <body>
+        <h1>CHAT</h1>
+        <fieldset class="fld">
+            <div>
+            <div id="messages" class="div"></div>
+            <div class="pesan">
+                <input id="textbox" type="text">
+                <button style="background-color: grey;" type="button" id="button">Kirim</button>
+            </div>
+            </div>
+        </fieldset>
+
+
+        <script>
+            let messages = document.getElementById("messages"); 
+            let textbox = document.getElementById("textbox");
+            let button = document.getElementById("button");
+
+            button.addEventListener("click", function(){
+                let newMessage = document.createElement("p");
+                newMessage.innerHTML = textbox.value;
+                messages.appendChild(newMessage);
+                textbox.value = "";
+            });
+        </script>
+    </body>
+</html>

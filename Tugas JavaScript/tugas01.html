@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <title>Kurs Rupiah</title>
+    <head>
+        <style>
+            .fld{
+                float: left;
+                width: 10%;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset class="fld" style="background-color: aquamarine;">
+            <legend>Kurs Rupiah - Mata Uang Asing</legend>
+            <table border="1" cellspacing="1">
+                <tr>
+                    <th>Masukan Nilai</th>
+                    <th>Valas</th>
+                    <th>Nilai Rupiah</th>
+                </tr>
+                <tr>
+                    <th><input type="nilai" value="0" size="10" id="uang" onchange="matauang()">
+                    <th><select name="Valas" id="mata" onchange="matauang()">
+                        <option value="dolar">Dollar US</option>
+                        <option value="singa">Dollar Singapore</option>
+                        <option value="rm">Ringgit Malaysia</option>
+                        <option value="yen">Yen Jepang</option>
+                        <option value="euro">Euro</option>
+                        <option value="riyal">Riyal Arab Saudi</option>
+                    </th>
+                    <th><input type="rupiah" value="0" size="10" id="rupiah" onchange="matauang"></th>
+                </tr>
+            </table>
+        </fieldset>
+        
+        <script>
+            function matauang(){
+                let uang = Number(document.getElementById("uang").value);
+                let mata = document.getElementById("mata").value;
+                
+                if (mata=== "dolar"){
+                    document.getElementById("rupiah").value= uang * 9915;
+                }
+                else if (mata=== "singa"){
+                    document.getElementById("rupiah").value= uang * 13472;
+                }
+                else if (mata=== "rm"){
+                    document.getElementById("rupiah").value= uang * 874;
+                }
+                else if (mata=== "yen"){
+                    document.getElementById("rupiah").value= uang * 120;
+                }
+                else if (mata=== "euro"){
+                    document.getElementById("rupiah").value= uang * 15888;
+                } 
+                else if (mata=== "riyal"){
+                    document.getElementById("rupiah").value= uang * 3592;
+                }
+
+            }
+        </script>
+    </body>
+</html>
+
